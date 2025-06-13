@@ -1,5 +1,5 @@
 ---
-title: Kioptrix Level 1 Write-up
+title: Write-up
 updated: 2025-06-12 13:08:02Z
 created: 2025-06-09 11:07:02Z
 latitude: 12.91414170
