@@ -54,7 +54,7 @@ Kioptrix Level 1 is a beginner-friendly Capture the Flag (CTF) virtual machine c
 
 ## Enumeration
 ### 1. Host Discovery with netdiscover:
-![b0856e6ead919f50db5d31392eee856e.png](resources/b0856e6ead919f50db5d31392eee856e.png)
+![b0856e6ead919f50db5d31392eee856e.png](kioptrix level 1/resources/b0856e6ead919f50db5d31392eee856e.png)
 
 ### 2. Nmap Scan
 
