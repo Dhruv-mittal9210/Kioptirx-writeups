@@ -41,7 +41,7 @@ Kioptrix Level 1 is a beginner-friendly Capture the Flag (CTF) virtual machine c
 4. Escalate: Achieved root privileges.
 5. Flag: Retrieved proof of root.
 
-![99bb6ee16339d62060443cd0303b7f1e.png](resources/99bb6ee16339d62060443cd0303b7f1e.png)
+![](_resources/99bb6ee16339d62060443cd0303b7f1e.png)
 
 ### TTPs
 
@@ -54,7 +54,7 @@ Kioptrix Level 1 is a beginner-friendly Capture the Flag (CTF) virtual machine c
 
 ## Enumeration
 ### 1. Host Discovery with netdiscover:
-![b0856e6ead919f50db5d31392eee856e.png](kioptrix level 1/resources/b0856e6ead919f50db5d31392eee856e.png)
+![](_resources/b0856e6ead919f50db5d31392eee856e.png)
 
 ### 2. Nmap Scan
 
@@ -146,17 +146,17 @@ Following the identification of open ports, I proceeded to enumerate the SMB ser
 
 For SMB enumeration, I utilized Metasploit to probe port 139 and determine the SMB service version.
 
-![037e397b76f4caac1f3932405b9f48f4.png](resources/037e397b76f4caac1f3932405b9f48f4.png)
+![](_resources/037e397b76f4caac1f3932405b9f48f4.png)
 
 
 It provided me the version of the Samba service that was — “Samba 2.2.1a”. With the SMB version identified as Samba 2.2.1a, I simply googled for relevant exploits targeting this version.
 
 
-![100cc3e90689d0da60dc6ce5c34c50e7.png](resources/100cc3e90689d0da60dc6ce5c34c50e7.png)
+![](_resources/100cc3e90689d0da60dc6ce5c34c50e7.png)
 
 I came across the "Samba trans2open Overflow (Linux x86)" exploit, which is designed for Samba versions 2.2.0 to 2.2.8 on Linux systems and is a strong candidate for exploiting this target.
 
-![6d110b9c3008bb41f71d9b42fb85a864.png](resources/6d110b9c3008bb41f71d9b42fb85a864.png)
+![](_resources/6d110b9c3008bb41f71d9b42fb85a864.png)
 
 ---
 
@@ -165,7 +165,7 @@ I came across the "Samba trans2open Overflow (Linux x86)" exploit, which is desi
 
 1. After identifying the appropriate exploit, I returned to Metasploit to search for available modules targeting Samba.
 
-![a662268e766ba36c5bf6891d3295f256.png](resources/a662268e766ba36c5bf6891d3295f256.png)
+![](_resources/a662268e766ba36c5bf6891d3295f256.png)
 
 Now I will set a suitable reverse shell payload and configured RHOST to the target’s IP to prepare the exploit for execution.
 
@@ -179,7 +179,7 @@ payload => generic/shell_reverse_tcp
 
 Then simply run the exploit by typing `run` orr `exploit` if you wanna look cool and voilla!, I get the root shell.
 
-![a86f40a40eef8a1678980e01d583c8df.png](resources/a86f40a40eef8a1678980e01d583c8df.png)
+![](_resources/a86f40a40eef8a1678980e01d583c8df.png)
 
 2. We can now read the `/var/mail/root` file to complete the challenge:
 
@@ -187,7 +187,7 @@ Then simply run the exploit by typing `run` orr `exploit` if you wanna look cool
 cat /var/mail/root
 ````
 
-![ba3556eb8fa7411d80643b3cca5d718c.png](resources/ba3556eb8fa7411d80643b3cca5d718c.png)
+![](_resources/ba3556eb8fa7411d80643b3cca5d718c.png)
 
 
 ---
